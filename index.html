@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mumtaz Sanjar | Web Developer & WordPress Expert</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+</head>
+<body>
+  <!-- ===== PRELOADER ===== -->
+  <div id="preloader">
+    <div class="loader-ring"></div>
+  </div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="logo logo-img-wrap">
+        <img src="assets/logo image.jpeg" alt="Mumtaz Sanjar Logo" class="nav-logo-img" style="height:42px;width:42px;object-fit:cover;display:block;border-radius:50%;border:2px solid var(--primary);"/>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="hamburger" id="hamburger">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="home">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-text" data-aos="fade-right" data-aos-duration="1000">
+        <p class="hero-greeting">Hello, I'm</p>
+        <h1 class="hero-name">Mumtaz Sanjar</h1>
+        <div class="hero-role">
+          <span>I'm a </span>
+          <span class="typed-text" id="typedText"></span>
+          <span class="cursor">|</span>
+        </div>
+        <p class="hero-desc">
+          Passionate developer crafting beautiful, functional digital experiences.
+          Let's build something amazing together.
+        </p>
+        <div class="hero-btns">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#contact" class="btn btn-outline">Hire Me</a>
+        </div>
+        <div class="hero-social">
+          <a href="https://wa.me/923013301875?text=I%20saw%20your%20portfolio%20and%20want%20to%20contact%20with%20you%20%F0%9F%91%8B%0A%0A*Please%20write%20your%20message%20below%3A*%0A" target="_blank" class="social-icon whatsapp wa-link" title="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="https://github.com/Mumtazsanjar" target="_blank" class="social-icon github" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/mumtaz-sanjar-220925386" target="_blank" class="social-icon linkedin" title="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://instagram.com/" target="_blank" class="social-icon instagram" title="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="mailto:mumtazsanjar@gmail.com" class="social-icon email" title="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+      <div class="hero-image" data-aos="fade-left" data-aos-duration="1000">
+        <div class="image-wrapper">
+          <div class="image-ring ring-1"></div>
+          <div class="image-ring ring-2"></div>
+          <img src="assets/profile.jpg.jpeg" alt="Mumtaz Sanjar" class="profile-img" onerror="this.src='https://ui-avatars.com/api/?name=Mumtaz+Sanjar&size=400&background=6c63ff&color=fff&bold=true'"/>
+        </div>
+        <div class="floating-badge badge-1">
+          <i class="fas fa-code"></i> Web Dev
+        </div>
+        <div class="floating-badge badge-2">
+          <i class="fas fa-star"></i> 1+ Year Exp
+        </div>
+      </div>
+    </div>
+    <a href="#about" class="scroll-down">
+      <i class="fas fa-chevron-down"></i>
+    </a>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Who I Am</span>
+        <h2 class="section-title">About <span class="highlight">Me</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="about-content">
+        <div class="about-image" data-aos="fade-right" data-aos-duration="900">
+          <div class="about-img-box">
+            <img src="assets/about.jpg.jpeg" alt="Mumtaz Sanjar" onerror="this.src='https://ui-avatars.com/api/?name=Mumtaz+Sanjar&size=500&background=6c63ff&color=fff&bold=true'"/>
+            <div class="about-exp-badge">
+              <span class="exp-num">1+</span>
+              <span class="exp-text">Years<br>Experience</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-text" data-aos="fade-left" data-aos-duration="900">
+          <h3>Full Stack Developer & WordPress Expert</h3>
+          <p>
+            I'm <strong>Mumtaz Sanjar</strong>, a passionate web developer from Pakistan with expertise
+            in building modern, responsive websites using HTML, CSS, JavaScript, PHP, and Laravel.
+            I also specialize in WordPress development with Elementor and SEO optimization.
+          </p>
+          <p>
+            I love turning complex problems into simple, beautiful digital solutions — whether it's
+            a custom PHP/Laravel app or a fully optimized WordPress site.
+          </p>
+          <div class="about-info-grid">
+            <div class="info-item">
+              <i class="fas fa-user"></i>
+              <div>
+                <span class="info-label">Name</span>
+                <span class="info-value">Mumtaz Sanjar</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <span class="info-label">Location</span>
+                <span class="info-value">Pakistan</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <span class="info-label">Email</span>
+                <span class="info-value">mumtazsanjar@gmail.com</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fab fa-whatsapp"></i>
+              <div>
+                <span class="info-label">WhatsApp</span>
+                <span class="info-value">+92 301 3301875</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-btns">
+            <a href="assets/Mumtaz sanjar-cv.pdf" download class="btn btn-primary">
+              <i class="fas fa-download"></i> Download CV
+            </a>
+            <a href="https://wa.me/923013301875?text=I%20saw%20your%20portfolio%20and%20want%20to%20contact%20with%20you%20%F0%9F%91%8B%0A%0A*Please%20write%20your%20message%20below%3A*%0A" target="_blank" class="btn btn-whatsapp wa-link">
+              <i class="fab fa-whatsapp"></i> WhatsApp Me
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATS SECTION ===== -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card" data-aos="zoom-in" data-aos-delay="0">
+          <i class="fas fa-project-diagram"></i>
+          <span class="stat-num" data-target="25">0</span>
+          <span class="stat-label">Projects Done</span>
+        </div>
+        <div class="stat-card" data-aos="zoom-in" data-aos-delay="100">
+          <i class="fas fa-users"></i>
+          <span class="stat-num" data-target="15">0</span>
+          <span class="stat-label">Happy Clients</span>
+        </div>
+        <div class="stat-card" data-aos="zoom-in" data-aos-delay="200">
+          <i class="fas fa-award"></i>
+          <span class="stat-num" data-target="1">0</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat-card" data-aos="zoom-in" data-aos-delay="300">
+          <i class="fas fa-coffee"></i>
+          <span class="stat-num" data-target="1200">0</span>
+          <span class="stat-label">Cups of Coffee</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS SECTION ===== -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">What I Know</span>
+        <h2 class="section-title">My <span class="highlight">Skills</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="skills-content">
+        <div class="skills-bars" data-aos="fade-right">
+          <h3>Technical Skills</h3>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span><i class="fab fa-html5"></i> HTML5</span>
+              <span>95%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span><i class="fab fa-css3-alt"></i> CSS3 / Bootstrap</span>
+              <span>92%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span><i class="fab fa-js-square"></i> JavaScript</span>
+              <span>85%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span><i class="fab fa-php"></i> PHP</span>
+              <span>88%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span><i class="fas fa-layer-group"></i> Laravel</span>
+              <span>82%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span><i class="fab fa-wordpress"></i> WordPress</span>
+              <span>90%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span><i class="fas fa-search"></i> SEO (Elementor)</span>
+              <span>85%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+          </div>
+        </div>
+        <div class="skills-cards" data-aos="fade-left">
+          <h3>Tools & Technologies</h3>
+          <div class="tech-grid">
+            <div class="tech-card"><i class="fab fa-html5"></i><span>HTML5</span></div>
+            <div class="tech-card"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
+            <div class="tech-card"><i class="fab fa-js-square"></i><span>JavaScript</span></div>
+            <div class="tech-card"><i class="fab fa-php"></i><span>PHP</span></div>
+            <div class="tech-card"><i class="fas fa-layer-group"></i><span>Laravel</span></div>
+            <div class="tech-card"><i class="fab fa-bootstrap"></i><span>Bootstrap</span></div>
+            <div class="tech-card"><i class="fab fa-wordpress"></i><span>WordPress</span></div>
+            <div class="tech-card"><i class="fas fa-puzzle-piece"></i><span>Elementor</span></div>
+            <div class="tech-card"><i class="fas fa-search"></i><span>SEO</span></div>
+            <div class="tech-card"><i class="fas fa-database"></i><span>MySQL</span></div>
+            <div class="tech-card"><i class="fab fa-git-alt"></i><span>Git</span></div>
+            <div class="tech-card"><i class="fas fa-mobile-alt"></i><span>Responsive</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS SECTION ===== -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">My Work</span>
+        <h2 class="section-title">Recent <span class="highlight">Projects</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="project-filters" data-aos="fade-up">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="app">App</button>
+        <button class="filter-btn" data-filter="design">Design</button>
+      </div>
+      <div class="projects-grid" id="projectsGrid">
+        <div class="project-card" data-category="design" data-aos="fade-up" data-aos-delay="0">
+          <div class="project-img">
+            <img src="assets/SaaSify-clone.png" alt="SaaS Landing Page"/>
+            <div class="project-overlay">
+              <a href="assets/SaaSify-clone.png" class="project-link project-view" data-img="assets/SaaSify-clone.png" data-title="SaaS Landing Page Clone"><i class="fas fa-eye"></i></a>
+              <a href="https://github.com/Mumtazsanjar/saas-landing-page-clone" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">Design</span>
+            <h3>SaaS Landing Page Clone</h3>
+            <p>Modern SaaS product landing page with clean UI and responsive design.</p>
+            <div class="project-tech">
+              <span>HTML</span><span>CSS</span><span>JS</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-img">
+            <img src="assets/Blog Platform.png" alt="Blog Platform"/>
+            <div class="project-overlay">
+              <a href="assets/Blog Platform.png" class="project-link project-view" data-img="assets/Blog Platform.png" data-title="Blog Platform"><i class="fas fa-eye"></i></a>
+              <a href="https://github.com/Mumtazsanjar/blog-platform" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">Web</span>
+            <h3>Blog Platform</h3>
+            <p>Dynamic blog platform with admin panel, categories, and PHP & MySQL backend.</p>
+            <div class="project-tech">
+              <span>PHP</span><span>MySQL</span><span>JS</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-img">
+            <img src="assets/Restaurant Website.png" alt="Restaurant Website"/>
+            <div class="project-overlay">
+              <a href="assets/Restaurant Website.png" class="project-link project-view" data-img="assets/Restaurant Website.png" data-title="Restaurant Website UI"><i class="fas fa-eye"></i></a>
+              <a href="https://github.com/Mumtazsanjar/restaurant-website-ui" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">Web</span>
+            <h3>Restaurant Website UI</h3>
+            <p>Beautiful restaurant website with modern UI, menu section and responsive layout.</p>
+            <div class="project-tech">
+              <span>HTML</span><span>CSS</span><span>JS</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card" data-category="design" data-aos="fade-up" data-aos-delay="300">
+          <div class="project-img">
+            <img src="assets/Portfolio.png" alt="Personal Portfolio"/>
+            <div class="project-overlay">
+              <a href="assets/Portfolio.png" class="project-link project-view" data-img="assets/Portfolio.png" data-title="Personal Portfolio Website"><i class="fas fa-eye"></i></a>
+              <a href="https://github.com/Mumtazsanjar/personal-portfolio-website" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">Design</span>
+            <h3>Personal Portfolio Website</h3>
+            <p>Professional developer portfolio with animations, dark mode and contact form.</p>
+            <div class="project-tech">
+              <span>HTML</span><span>CSS</span><span>JS</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="400">
+          <div class="project-img">
+            <img src="assets/E-Commerce Website.png" alt="PHP E-Commerce"/>
+            <div class="project-overlay">
+              <a href="assets/E-Commerce Website.png" class="project-link project-view" data-img="assets/E-Commerce Website.png" data-title="PHP E-Commerce Website"><i class="fas fa-eye"></i></a>
+              <a href="https://github.com/Mumtazsanjar/php-ecommerce-website" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">Web</span>
+            <h3>PHP E-Commerce Website</h3>
+            <p>Full-stack e-commerce platform with cart, checkout and admin panel using PHP & MySQL.</p>
+            <div class="project-tech">
+              <span>PHP</span><span>MySQL</span><span>HTML</span><span>CSS</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="500">
+          <div class="project-img">
+            <img src="assets/ModernBlog-—-Modern-Tech-Blog.png" alt="Modern Tech Blog"/>
+            <div class="project-overlay">
+              <a href="assets/ModernBlog-—-Modern-Tech-Blog.png" class="project-link project-view" data-img="assets/ModernBlog-—-Modern-Tech-Blog.png" data-title="Modern Tech Blog"><i class="fas fa-eye"></i></a>
+              <a href="https://github.com/Mumtazsanjar/blog-platform" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">Web</span>
+            <h3>Modern Tech Blog</h3>
+            <p>Clean and modern tech blog UI with article listings, categories and dark theme.</p>
+            <div class="project-tech">
+              <span>HTML</span><span>CSS</span><span>JS</span><span>PHP</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS SECTION ===== -->
+  <section class="testimonials section" id="testimonials">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Client Reviews</span>
+        <h2 class="section-title">What People <span class="highlight">Say</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="testi-slider-wrapper" data-aos="fade-up" data-aos-delay="100">
+        <div class="testi-track" id="testiSlider">
+
+          <!-- ===== CARD 1 ===== -->
+          <div class="testi-card">
+            <div class="testi-top">
+              <div class="testi-avatar-wrap">
+                <img src="assets/Maqsood Ahmed.jpg" alt="Maqsood Ahmed" onerror="this.src='https://ui-avatars.com/api/?name=Maqsood+Ahmed&size=80&background=6c63ff&color=fff&bold=true&rounded=true'"/>
+                <span class="testi-verified" title="Verified Client"><i class="fas fa-check"></i></span>
+              </div>
+              <div class="testi-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <span class="testi-rating">5.0</span>
+              </div>
+            </div>
+            <div class="testi-quote-icon"><i class="fas fa-quote-left"></i></div>
+            <p class="testi-text">"Mumtaz and I worked together on a project, and it was a great experience. He is reliable, delivers projects on time, writes clean and organized code, and is always committed to quality. I would definitely recommend him to anyone looking for a professional developer."</p>
+            <div class="testi-footer">
+              <div class="testi-person">
+                <strong>Maqsood Ahmed</strong>
+                <span>App Developer</span>
+              </div>
+              <a href="https://www.linkedin.com/in/pub-dir-maqsood-ahmad/" target="_blank" rel="noopener noreferrer" class="testi-linkedin" title="View LinkedIn Profile">
+                <i class="fab fa-linkedin"></i> LinkedIn
+              </a>
+            </div>
+          </div>
+
+          <!-- ===== CARD 2 ===== -->
+          <div class="testi-card">
+            <div class="testi-top">
+              <div class="testi-avatar-wrap">
+                <img src="assets/Ali Bukhsh Shah.png" alt="Ali Bukhsh Shah" onerror="this.src='https://ui-avatars.com/api/?name=Ali+Bukhsh+Shah&size=80&background=ff6584&color=fff&bold=true&rounded=true'"/>
+                <span class="testi-verified" title="Verified Client"><i class="fas fa-check"></i></span>
+              </div>
+              <div class="testi-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <span class="testi-rating">5.0</span>
+              </div>
+            </div>
+            <div class="testi-quote-icon"><i class="fas fa-quote-left"></i></div>
+            <p class="testi-text">"I had the pleasure of working with Mumtaz on a web development project. He is highly skilled, writes clean and well-structured code, and consistently delivers work on time. His professionalism and attention to detail made the collaboration smooth and successful. I highly recommend him for any web development project."</p>
+            <div class="testi-footer">
+              <div class="testi-person">
+                <strong>Ali Bukhsh Shah</strong>
+                <span>Web Developer</span>
+              </div>
+              <a href="https://www.linkedin.com/in/ali-buksh-shah-160620322/" target="_blank" rel="noopener noreferrer" class="testi-linkedin" title="View LinkedIn Profile">
+                <i class="fab fa-linkedin"></i> LinkedIn
+              </a>
+            </div>
+          </div>
+
+          <!-- ===== CARD 3 ===== -->
+          <div class="testi-card">
+            <div class="testi-top">
+              <div class="testi-avatar-wrap">
+                <img src="https://ui-avatars.com/api/?name=Usman+Baig&size=80&background=43e97b&color=fff&bold=true&rounded=true" alt="Usman Baig"/>
+                <span class="testi-verified" title="Verified Client"><i class="fas fa-check"></i></span>
+              </div>
+              <div class="testi-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                <span class="testi-rating">4.5</span>
+              </div>
+            </div>
+            <div class="testi-quote-icon"><i class="fas fa-quote-left"></i></div>
+            <p class="testi-text">"Great experience! Mumtaz understood my requirements quickly and delivered a beautiful blog platform well within the deadline. Will definitely hire again."</p>
+            <div class="testi-footer">
+              <div class="testi-person">
+                <strong>Usman Baig</strong>
+                
+              </div>
+              
+            </div>
+          </div>
+
+          <!-- ===== CARD 4 ===== -->
+          <div class="testi-card">
+            <div class="testi-top">
+              <div class="testi-avatar-wrap">
+                <img src="https://ui-avatars.com/api/?name=Zafar&size=80&background=f093fb&color=fff&bold=true&rounded=true" alt="Fatima Noor"/>
+                <span class="testi-verified" title="Verified Client"><i class="fas fa-check"></i></span>
+              </div>
+              <div class="testi-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <span class="testi-rating">5.0</span>
+              </div>
+            </div>
+            <div class="testi-quote-icon"><i class="fas fa-quote-left"></i></div>
+            <p class="testi-text">"I hired Mumtaz for my WordPress site and SEO. The website traffic increased significantly after optimization. Super happy with the results!"</p>
+            <div class="testi-footer">
+              <div class="testi-person">
+                <strong>M.Zafar</strong>
+                <span>Business Owner</span>
+              </div>
+              
+            </div>
+          </div>
+
+          <!-- ===== CARD 5 ===== -->
+          <div class="testi-card">
+            <div class="testi-top">
+              <div class="testi-avatar-wrap">
+                <img src="https://ui-avatars.com/api/?name=Zain+Ali&size=80&background=4facfe&color=fff&bold=true&rounded=true" alt="Zain Ali"/>
+                <span class="testi-verified" title="Verified Client"><i class="fas fa-check"></i></span>
+              </div>
+              <div class="testi-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <span class="testi-rating">5.0</span>
+              </div>
+            </div>
+            <div class="testi-quote-icon"><i class="fas fa-quote-left"></i></div>
+            <p class="testi-text">"Mumtaz is super talented and hardworking. He fixed all bugs in my PHP project quickly and improved the entire UI. Excellent quality work!"</p>
+            <div class="testi-footer">
+              <div class="testi-person">
+                <strong>Zain Ali</strong>
+                
+              </div>
+              
+            </div>
+          </div>
+
+        </div><!-- end testi-track -->
+
+        <!-- Slider Controls -->
+        <div class="testi-controls">
+          <button class="testi-btn" id="testiPrev" aria-label="Previous">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="testi-dots" id="testiDots"></div>
+          <button class="testi-btn" id="testiNext" aria-label="Next">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div><!-- end wrapper -->
+
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Contact <span class="highlight">Me</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="contact-content">
+        <div class="contact-info" data-aos="fade-right">
+          <h3>Let's Talk!</h3>
+          <p>Have a project in mind? Let's discuss it. I'm available for freelance work.</p>
+          <div class="contact-cards">
+            <a href="https://wa.me/923013301875?text=I%20saw%20your%20portfolio%20and%20want%20to%20contact%20with%20you%20%F0%9F%91%8B%0A%0A*Please%20write%20your%20message%20below%3A*%0A" target="_blank" class="contact-card whatsapp-card wa-link">
+              <div class="contact-card-icon"><i class="fab fa-whatsapp"></i></div>
+              <div class="contact-card-text">
+                <span>WhatsApp</span>
+                <strong>+92 301 3301875</strong>
+              </div>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="mailto:mumtazsanjar@gmail.com" class="contact-card email-card">
+              <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
+              <div class="contact-card-text">
+                <span>Email</span>
+                <strong>mumtazsanjar@gmail.com</strong>
+              </div>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/mumtaz-sanjar-220925386" target="_blank" class="contact-card linkedin-card">
+              <div class="contact-card-icon"><i class="fab fa-linkedin-in"></i></div>
+              <div class="contact-card-text">
+                <span>LinkedIn</span>
+                <strong>Mumtaz Sanjar</strong>
+              </div>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="https://github.com/Mumtazsanjar" target="_blank" class="contact-card github-card">
+              <div class="contact-card-icon"><i class="fab fa-github"></i></div>
+              <div class="contact-card-text">
+                <span>GitHub</span>
+                <strong>Mumtazsanjar</strong>
+              </div>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+        <div class="contact-form-wrapper" data-aos="fade-left">
+          <form class="contact-form" id="contactForm">
+            <!-- Web3Forms access key — get yours free at web3forms.com -->
+            <input type="hidden" name="access_key" value="dfbba545-1254-4780-8028-6d6fdf101bc2"/>
+            <input type="hidden" name="from_name" value="Mumtaz Portfolio"/>
+            <input type="checkbox" name="botcheck" style="display:none;"/>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name"><i class="fas fa-user"></i> Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required/>
+              </div>
+              <div class="form-group">
+                <label for="email"><i class="fas fa-envelope"></i> Your Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="phone"><i class="fab fa-whatsapp"></i> WhatsApp / Phone</label>
+              <input type="tel" id="phone" name="phone" placeholder="+92 300 0000000"/>
+            </div>
+            <div class="form-group">
+              <label for="subject"><i class="fas fa-tag"></i> Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Project subject" required/>
+            </div>
+            <div class="form-group">
+              <label for="message"><i class="fas fa-comment-dots"></i> Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+            <div class="form-status" id="formStatus"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== IMAGE LIGHTBOX ===== -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-overlay" id="lightboxOverlay"></div>
+    <div class="lightbox-box">
+      <div class="lightbox-header">
+        <span class="lightbox-title" id="lightboxTitle"></span>
+        <button class="lightbox-close" id="lightboxClose"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="lightbox-body">
+        <img src="" alt="" id="lightboxImg"/>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="#home" class="logo logo-img-wrap">
+            <img src="assets/logo image.jpeg" alt="Mumtaz Sanjar Logo" class="nav-logo-img" style="height:42px;width:42px;object-fit:cover;display:block;border-radius:50%;border:2px solid var(--primary);"/>
+          </a>
+          <p>Building digital experiences with passion and precision.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h4>Follow Me</h4>
+          <div class="footer-social-icons">
+            <a href="https://wa.me/923013301875?text=I%20saw%20your%20portfolio%20and%20want%20to%20contact%20with%20you%20%F0%9F%91%8B%0A%0A*Please%20write%20your%20message%20below%3A*%0A" target="_blank" class="social-icon whatsapp wa-link" title="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://github.com/Mumtazsanjar" target="_blank" class="social-icon github" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/mumtaz-sanjar-220925386" target="_blank" class="social-icon linkedin" title="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://instagram.com/" target="_blank" class="social-icon instagram" title="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://twitter.com/" target="_blank" class="social-icon twitter" title="Twitter/X">
+              <i class="fab fa-x-twitter"></i>
+            </a>
+            <a href="https://facebook.com/" target="_blank" class="social-icon facebook" title="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 <span>Mumtaz Sanjar</span>. All Rights Reserved.</p>
+        <p>Made with <i class="fas fa-heart"></i> in Pakistan</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== WHATSAPP FLOAT BUTTON ===== -->
+  <a href="https://wa.me/923013301875?text=I%20saw%20your%20portfolio%20and%20want%20to%20contact%20with%20you%20%F0%9F%91%8B%0A%0A*Please%20write%20your%20message%20below%3A*%0A" target="_blank" class="whatsapp-float wa-link" title="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="whatsapp-tooltip">Chat with me!</span>
+  </a>
+
+  <!-- ===== SCROLL TO TOP ===== -->
+  <button class="scroll-top" id="scrollTop" title="Back to Top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
