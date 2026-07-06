@@ -3,11 +3,7 @@
 // ===== VISITOR TRACKER — disabled on static hosting =====
 // (PHP backend not available on Vercel — removed)
 
-// ===== PRELOADER =====
-window.addEventListener('load', () => {
-  const preloader = document.getElementById('preloader');
-  setTimeout(() => preloader.classList.add('hidden'), 600);
-});
+// ===== PRELOADER — removed for fast load =====
 
 // ===== AOS INIT =====
 AOS.init({
