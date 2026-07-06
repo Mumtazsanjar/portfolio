@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mumtaz Sanjar | Web Developer & WordPress Expert</title>
+  <!-- Preload critical image -->
+  <link rel="preload" as="image" href="assets/profile.jpg.jpeg"/>
   <link rel="stylesheet" href="css/style.css"/>
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
@@ -84,7 +86,7 @@
         <div class="image-wrapper">
           <div class="image-ring ring-1"></div>
           <div class="image-ring ring-2"></div>
-          <img src="assets/profile.jpg.jpeg" alt="Mumtaz Sanjar" class="profile-img" onerror="this.src='https://ui-avatars.com/api/?name=Mumtaz+Sanjar&size=400&background=6c63ff&color=fff&bold=true'"/>
+          <img src="assets/profile.jpg.jpeg" alt="Mumtaz Sanjar" class="profile-img" fetchpriority="high" decoding="async" onerror="this.src='https://ui-avatars.com/api/?name=Mumtaz+Sanjar&size=400&background=6c63ff&color=fff&bold=true'"/>
         </div>
         <div class="floating-badge badge-1">
           <i class="fas fa-code"></i> Web Dev
@@ -110,7 +112,7 @@
       <div class="about-content">
         <div class="about-image" data-aos="fade-right" data-aos-duration="900">
           <div class="about-img-box">
-            <img src="assets/about.jpg.jpeg" alt="Mumtaz Sanjar" onerror="this.src='https://ui-avatars.com/api/?name=Mumtaz+Sanjar&size=500&background=6c63ff&color=fff&bold=true'"/>
+            <img src="assets/about.jpg.jpeg" alt="Mumtaz Sanjar" loading="lazy" decoding="async" onerror="this.src='https://ui-avatars.com/api/?name=Mumtaz+Sanjar&size=500&background=6c63ff&color=fff&bold=true'"/>
             <div class="about-exp-badge">
               <span class="exp-num">1+</span>
               <span class="exp-text">Years<br>Experience</span>
@@ -298,7 +300,7 @@
       <div class="projects-grid" id="projectsGrid">
         <div class="project-card" data-category="design" data-aos="fade-up" data-aos-delay="0">
           <div class="project-img">
-            <img src="assets/SaaSify-clone.png" alt="SaaS Landing Page"/>
+            <img src="assets/SaaSify-clone.png" alt="SaaS Landing Page" loading="lazy" decoding="async"/>
             <div class="project-overlay">
               <a href="assets/SaaSify-clone.png" class="project-link project-view" data-img="assets/SaaSify-clone.png" data-title="SaaS Landing Page Clone"><i class="fas fa-eye"></i></a>
               <a href="https://github.com/Mumtazsanjar/saas-landing-page-clone" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i></a>
@@ -315,7 +317,7 @@
         </div>
         <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="100">
           <div class="project-img">
-            <img src="assets/Blog Platform.png" alt="Blog Platform"/>
+            <img src="assets/Blog Platform.png" alt="Blog Platform" loading="lazy" decoding="async"/>
             <div class="project-overlay">
               <a href="assets/Blog Platform.png" class="project-link project-view" data-img="assets/Blog Platform.png" data-title="Blog Platform"><i class="fas fa-eye"></i></a>
               <a href="https://github.com/Mumtazsanjar/blog-platform" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i></a>
@@ -332,7 +334,7 @@
         </div>
         <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="200">
           <div class="project-img">
-            <img src="assets/Restaurant Website.png" alt="Restaurant Website"/>
+            <img src="assets/Restaurant Website.png" alt="Restaurant Website" loading="lazy" decoding="async"/>
             <div class="project-overlay">
               <a href="assets/Restaurant Website.png" class="project-link project-view" data-img="assets/Restaurant Website.png" data-title="Restaurant Website UI"><i class="fas fa-eye"></i></a>
               <a href="https://github.com/Mumtazsanjar/restaurant-website-ui" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i></a>
@@ -349,7 +351,7 @@
         </div>
         <div class="project-card" data-category="design" data-aos="fade-up" data-aos-delay="300">
           <div class="project-img">
-            <img src="assets/Portfolio.png" alt="Personal Portfolio"/>
+            <img src="assets/Portfolio.png" alt="Personal Portfolio" loading="lazy" decoding="async"/>
             <div class="project-overlay">
               <a href="assets/Portfolio.png" class="project-link project-view" data-img="assets/Portfolio.png" data-title="Personal Portfolio Website"><i class="fas fa-eye"></i></a>
               <a href="https://github.com/Mumtazsanjar/personal-portfolio-website" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i></a>
@@ -366,7 +368,7 @@
         </div>
         <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="400">
           <div class="project-img">
-            <img src="assets/E-Commerce Website.png" alt="PHP E-Commerce"/>
+            <img src="assets/E-Commerce Website.png" alt="PHP E-Commerce" loading="lazy" decoding="async"/>
             <div class="project-overlay">
               <a href="assets/E-Commerce Website.png" class="project-link project-view" data-img="assets/E-Commerce Website.png" data-title="PHP E-Commerce Website"><i class="fas fa-eye"></i></a>
               <a href="https://github.com/Mumtazsanjar/php-ecommerce-website" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i></a>
@@ -383,7 +385,7 @@
         </div>
         <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="500">
           <div class="project-img">
-            <img src="assets/ModernBlog-—-Modern-Tech-Blog.png" alt="Modern Tech Blog"/>
+            <img src="assets/ModernBlog-—-Modern-Tech-Blog.png" alt="Modern Tech Blog" loading="lazy" decoding="async"/>
             <div class="project-overlay">
               <a href="assets/ModernBlog-—-Modern-Tech-Blog.png" class="project-link project-view" data-img="assets/ModernBlog-—-Modern-Tech-Blog.png" data-title="Modern Tech Blog"><i class="fas fa-eye"></i></a>
               <a href="https://github.com/Mumtazsanjar/blog-platform" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i></a>
