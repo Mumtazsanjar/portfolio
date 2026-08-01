@@ -4,22 +4,42 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mumtaz Sanjar | Web Developer & WordPress Expert</title>
-  <!-- Preload critical image -->
-  <link rel="preload" as="image" href="assets/profile.jpg.jpeg"/>
+  <meta name="description" content="Mumtaz Sanjar — Full Stack Web Developer from Pakistan. Expert in HTML, CSS, JavaScript, PHP, Laravel, WordPress & SEO. Available for freelance projects."/>
+
+  <!-- Preconnect to external origins to speed up DNS + TLS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com"/>
+
+  <!-- Preload critical above-the-fold image -->
+  <link rel="preload" as="image" href="assets/profile.jpg.jpeg" fetchpriority="high"/>
+
+  <!-- Own CSS — render blocking but small (8KB), keep it -->
   <link rel="stylesheet" href="css/style.css"/>
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
-  <!-- AOS Animation -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+
+  <!-- Font Awesome — non-blocking via media trick, swapped to all after load -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'"/>
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/></noscript>
+
+  <!-- Google Fonts — non-blocking -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" media="print" onload="this.media='all'"/>
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"/></noscript>
+
+  <!-- AOS CSS — non-blocking -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" media="print" onload="this.media='all'"/>
+  <noscript><link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/></noscript>
+
+  <!-- Inline critical font fallback so text shows instantly before Poppins loads -->
+  <style>
+    body { font-family: system-ui, -apple-system, 'Segoe UI', sans-serif; }
+  </style>
 </head>
 <body>
   <!-- ===== NAVBAR ===== -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <a href="#home" class="logo logo-img-wrap">
-        <img src="assets/logo image.jpeg" alt="Mumtaz Sanjar Logo" class="nav-logo-img" style="height:42px;width:42px;object-fit:cover;display:block;border-radius:50%;border:2px solid var(--primary);"/>
+        <img src="assets/logo image.jpeg" alt="Mumtaz Sanjar Logo" class="nav-logo-img" fetchpriority="high" width="42" height="42" style="height:42px;width:42px;object-fit:cover;display:block;border-radius:50%;border:2px solid var(--primary);"/>
       </a>
       <ul class="nav-links" id="navLinks">
         <li><a href="#home" class="nav-link active">Home</a></li>
@@ -30,10 +50,10 @@
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
       <div class="nav-right">
-        <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+        <button class="theme-toggle" id="themeToggle" title="Toggle Theme" aria-label="Toggle light/dark theme">
           <i class="fas fa-moon"></i>
         </button>
-        <button class="hamburger" id="hamburger">
+        <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navLinks">
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -41,6 +61,7 @@
   </nav>
 
   <!-- ===== HERO SECTION ===== -->
+  <main id="main-content">
   <section class="hero" id="home">
     <div class="hero-bg-shapes">
       <div class="shape shape-1"></div>
@@ -86,7 +107,7 @@
         <div class="image-wrapper">
           <div class="image-ring ring-1"></div>
           <div class="image-ring ring-2"></div>
-          <img src="assets/profile.jpg.jpeg" alt="Mumtaz Sanjar" class="profile-img" fetchpriority="high" decoding="async" onerror="this.src='https://ui-avatars.com/api/?name=Mumtaz+Sanjar&size=400&background=6c63ff&color=fff&bold=true'"/>
+          <img src="assets/profile.jpg.jpeg" alt="Mumtaz Sanjar" class="profile-img" fetchpriority="high" decoding="async" width="300" height="300" onerror="this.src='https://ui-avatars.com/api/?name=Mumtaz+Sanjar&size=400&background=6c63ff&color=fff&bold=true'"/>
         </div>
         <div class="floating-badge badge-1">
           <i class="fas fa-code"></i> Web Dev
@@ -96,8 +117,9 @@
         </div>
       </div>
     </div>
-    <a href="#about" class="scroll-down">
-      <i class="fas fa-chevron-down"></i>
+    <a href="#about" class="scroll-down" aria-label="Scroll down to About section">
+      <i class="fas fa-chevron-down" aria-hidden="true"></i>
+      <span class="sr-only">Scroll to About section</span>
     </a>
   </section>
 
@@ -112,7 +134,7 @@
       <div class="about-content">
         <div class="about-image" data-aos="fade-right" data-aos-duration="900">
           <div class="about-img-box">
-            <img src="assets/about.jpg.jpeg" alt="Mumtaz Sanjar" loading="lazy" decoding="async" onerror="this.src='https://ui-avatars.com/api/?name=Mumtaz+Sanjar&size=500&background=6c63ff&color=fff&bold=true'"/>
+            <img src="assets/about.jpg.jpeg" alt="Mumtaz Sanjar" loading="lazy" decoding="async" width="500" height="500" onerror="this.src='https://ui-avatars.com/api/?name=Mumtaz+Sanjar&size=500&background=6c63ff&color=fff&bold=true'"/>
             <div class="about-exp-badge">
               <span class="exp-num">1+</span>
               <span class="exp-text">Years<br>Experience</span>
@@ -302,8 +324,8 @@
           <div class="project-img">
             <img src="assets/SaaSify-clone.png" alt="SaaS Landing Page" loading="lazy" decoding="async"/>
             <div class="project-overlay">
-              <a href="assets/SaaSify-clone.png" class="project-link project-view" data-img="assets/SaaSify-clone.png" data-title="SaaS Landing Page Clone"><i class="fas fa-eye"></i></a>
-              <a href="https://github.com/Mumtazsanjar/saas-landing-page-clone" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i></a>
+              <a href="assets/SaaSify-clone.png" class="project-link project-view" aria-label="View SaaS Landing Page screenshot" data-img="assets/SaaSify-clone.png" data-title="SaaS Landing Page Clone"><i class="fas fa-eye" aria-hidden="true"></i></a>
+              <a href="https://github.com/Mumtazsanjar/saas-landing-page-clone" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View SaaS Landing Page source code on GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
             </div>
           </div>
           <div class="project-info">
@@ -319,8 +341,8 @@
           <div class="project-img">
             <img src="assets/Blog Platform.png" alt="Blog Platform" loading="lazy" decoding="async"/>
             <div class="project-overlay">
-              <a href="assets/Blog Platform.png" class="project-link project-view" data-img="assets/Blog Platform.png" data-title="Blog Platform"><i class="fas fa-eye"></i></a>
-              <a href="https://github.com/Mumtazsanjar/blog-platform" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i></a>
+              <a href="assets/Blog Platform.png" class="project-link project-view" aria-label="View Blog Platform screenshot" data-img="assets/Blog Platform.png" data-title="Blog Platform"><i class="fas fa-eye" aria-hidden="true"></i></a>
+              <a href="https://github.com/Mumtazsanjar/blog-platform" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View Blog Platform source code on GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
             </div>
           </div>
           <div class="project-info">
@@ -336,8 +358,8 @@
           <div class="project-img">
             <img src="assets/Restaurant Website.png" alt="Restaurant Website" loading="lazy" decoding="async"/>
             <div class="project-overlay">
-              <a href="assets/Restaurant Website.png" class="project-link project-view" data-img="assets/Restaurant Website.png" data-title="Restaurant Website UI"><i class="fas fa-eye"></i></a>
-              <a href="https://github.com/Mumtazsanjar/restaurant-website-ui" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i></a>
+              <a href="assets/Restaurant Website.png" class="project-link project-view" aria-label="View Restaurant Website screenshot" data-img="assets/Restaurant Website.png" data-title="Restaurant Website UI"><i class="fas fa-eye" aria-hidden="true"></i></a>
+              <a href="https://github.com/Mumtazsanjar/restaurant-website-ui" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View Restaurant Website source code on GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
             </div>
           </div>
           <div class="project-info">
@@ -353,8 +375,8 @@
           <div class="project-img">
             <img src="assets/Portfolio.png" alt="Personal Portfolio" loading="lazy" decoding="async"/>
             <div class="project-overlay">
-              <a href="assets/Portfolio.png" class="project-link project-view" data-img="assets/Portfolio.png" data-title="Personal Portfolio Website"><i class="fas fa-eye"></i></a>
-              <a href="https://github.com/Mumtazsanjar/personal-portfolio-website" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i></a>
+              <a href="assets/Portfolio.png" class="project-link project-view" aria-label="View Personal Portfolio screenshot" data-img="assets/Portfolio.png" data-title="Personal Portfolio Website"><i class="fas fa-eye" aria-hidden="true"></i></a>
+              <a href="https://github.com/Mumtazsanjar/personal-portfolio-website" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View Personal Portfolio source code on GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
             </div>
           </div>
           <div class="project-info">
@@ -370,8 +392,8 @@
           <div class="project-img">
             <img src="assets/E-Commerce Website.png" alt="PHP E-Commerce" loading="lazy" decoding="async"/>
             <div class="project-overlay">
-              <a href="assets/E-Commerce Website.png" class="project-link project-view" data-img="assets/E-Commerce Website.png" data-title="PHP E-Commerce Website"><i class="fas fa-eye"></i></a>
-              <a href="https://github.com/Mumtazsanjar/php-ecommerce-website" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i></a>
+              <a href="assets/E-Commerce Website.png" class="project-link project-view" aria-label="View PHP E-Commerce Website screenshot" data-img="assets/E-Commerce Website.png" data-title="PHP E-Commerce Website"><i class="fas fa-eye" aria-hidden="true"></i></a>
+              <a href="https://github.com/Mumtazsanjar/php-ecommerce-website" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View PHP E-Commerce Website source code on GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
             </div>
           </div>
           <div class="project-info">
@@ -387,8 +409,8 @@
           <div class="project-img">
             <img src="assets/ModernBlog-—-Modern-Tech-Blog.png" alt="Modern Tech Blog" loading="lazy" decoding="async"/>
             <div class="project-overlay">
-              <a href="assets/ModernBlog-—-Modern-Tech-Blog.png" class="project-link project-view" data-img="assets/ModernBlog-—-Modern-Tech-Blog.png" data-title="Modern Tech Blog"><i class="fas fa-eye"></i></a>
-              <a href="https://github.com/Mumtazsanjar/blog-platform" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i></a>
+              <a href="assets/ModernBlog-—-Modern-Tech-Blog.png" class="project-link project-view" aria-label="View Modern Tech Blog screenshot" data-img="assets/ModernBlog-—-Modern-Tech-Blog.png" data-title="Modern Tech Blog"><i class="fas fa-eye" aria-hidden="true"></i></a>
+              <a href="https://github.com/Mumtazsanjar/blog-platform" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View Modern Tech Blog source code on GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
             </div>
           </div>
           <div class="project-info">
@@ -420,7 +442,7 @@
           <div class="testi-card">
             <div class="testi-top">
               <div class="testi-avatar-wrap">
-                <img src="assets/Maqsood Ahmed.jpg" alt="Maqsood Ahmed" onerror="this.src='https://ui-avatars.com/api/?name=Maqsood+Ahmed&size=80&background=6c63ff&color=fff&bold=true&rounded=true'"/>
+                <img src="assets/Maqsood Ahmed.jpg" alt="Maqsood Ahmed" width="62" height="62" onerror="this.src='https://ui-avatars.com/api/?name=Maqsood+Ahmed&size=80&background=6c63ff&color=fff&bold=true&rounded=true'"/>
                 <span class="testi-verified" title="Verified Client"><i class="fas fa-check"></i></span>
               </div>
               <div class="testi-stars">
@@ -445,7 +467,7 @@
           <div class="testi-card">
             <div class="testi-top">
               <div class="testi-avatar-wrap">
-                <img src="assets/Ali Bukhsh Shah.png" alt="Ali Bukhsh Shah" onerror="this.src='https://ui-avatars.com/api/?name=Ali+Bukhsh+Shah&size=80&background=ff6584&color=fff&bold=true&rounded=true'"/>
+                <img src="assets/Ali Bukhsh Shah.png" alt="Ali Bukhsh Shah" width="62" height="62" onerror="this.src='https://ui-avatars.com/api/?name=Ali+Bukhsh+Shah&size=80&background=ff6584&color=fff&bold=true&rounded=true'"/>
                 <span class="testi-verified" title="Verified Client"><i class="fas fa-check"></i></span>
               </div>
               <div class="testi-stars">
@@ -638,15 +660,16 @@
   </section>
 
   <!-- ===== IMAGE LIGHTBOX ===== -->
+  </main>
   <div class="lightbox" id="lightbox">
     <div class="lightbox-overlay" id="lightboxOverlay"></div>
     <div class="lightbox-box">
       <div class="lightbox-header">
         <span class="lightbox-title" id="lightboxTitle"></span>
-        <button class="lightbox-close" id="lightboxClose"><i class="fas fa-times"></i></button>
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close image preview"><i class="fas fa-times" aria-hidden="true"></i></button>
       </div>
       <div class="lightbox-body">
-        <img src="" alt="" id="lightboxImg"/>
+        <img src="" alt="" id="lightboxImg" width="800" height="500"/>
       </div>
     </div>
   </div>
@@ -657,7 +680,7 @@
       <div class="footer-content">
         <div class="footer-brand">
           <a href="#home" class="logo logo-img-wrap">
-            <img src="assets/logo image.jpeg" alt="Mumtaz Sanjar Logo" class="nav-logo-img" style="height:42px;width:42px;object-fit:cover;display:block;border-radius:50%;border:2px solid var(--primary);"/>
+            <img src="assets/logo image.jpeg" alt="Mumtaz Sanjar Logo" class="nav-logo-img" loading="lazy" width="42" height="42" style="height:42px;width:42px;object-fit:cover;display:block;border-radius:50%;border:2px solid var(--primary);"/>
           </a>
           <p>Building digital experiences with passion and precision.</p>
         </div>
@@ -703,18 +726,18 @@
   </footer>
 
   <!-- ===== WHATSAPP FLOAT BUTTON ===== -->
-  <a href="https://wa.me/923013301875?text=I%20saw%20your%20portfolio%20and%20want%20to%20contact%20with%20you%20%F0%9F%91%8B%0A%0A*Please%20write%20your%20message%20below%3A*%0A" target="_blank" class="whatsapp-float wa-link" title="Chat on WhatsApp">
-    <i class="fab fa-whatsapp"></i>
+  <a href="https://wa.me/923013301875?text=I%20saw%20your%20portfolio%20and%20want%20to%20contact%20with%20you%20%F0%9F%91%8B%0A%0A*Please%20write%20your%20message%20below%3A*%0A" target="_blank" class="whatsapp-float wa-link" title="Chat on WhatsApp" aria-label="Chat with Mumtaz Sanjar on WhatsApp">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
     <span class="whatsapp-tooltip">Chat with me!</span>
   </a>
 
   <!-- ===== SCROLL TO TOP ===== -->
-  <button class="scroll-top" id="scrollTop" title="Back to Top">
-    <i class="fas fa-arrow-up"></i>
+  <button class="scroll-top" id="scrollTop" title="Back to Top" aria-label="Scroll back to top">
+    <i class="fas fa-arrow-up" aria-hidden="true"></i>
   </button>
 
-  <!-- Scripts -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="js/main.js"></script>
+  <!-- Scripts — deferred so they don't block rendering -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>
