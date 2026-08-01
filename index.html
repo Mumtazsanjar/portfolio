@@ -17,15 +17,14 @@
   <!-- Own CSS — render blocking but small (8KB), keep it -->
   <link rel="stylesheet" href="css/style.css"/>
 
-  <!-- Font Awesome — non-blocking via media trick, swapped to all after load -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'"/>
-  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/></noscript>
+  <!-- Font Awesome — kept blocking so icons always show immediately -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
-  <!-- Google Fonts — non-blocking -->
+  <!-- Google Fonts — non-blocking, fallback font shows first -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" media="print" onload="this.media='all'"/>
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"/></noscript>
 
-  <!-- AOS CSS — non-blocking -->
+  <!-- AOS CSS — non-blocking, animations just won't run until loaded -->
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" media="print" onload="this.media='all'"/>
   <noscript><link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/></noscript>
 
