@@ -308,6 +308,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       const visible = i >= offset && i < offset + perPage;
       card.style.display = visible ? 'flex' : 'none';
       card.style.flexDirection = 'column';
+      card.style.flex = visible ? '1' : '';
       if (visible) {
         setTimeout(() => card.classList.add('active-testi'), 10);
       } else {
@@ -332,6 +333,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     perPage = getPerPage();
     total   = Math.ceil(cards.length / perPage);
     if (current >= total) current = 0;
+    slider.classList.add('js-ready'); // enable flex layout now that JS is ready
     buildDots();
     goTo(current);
   }

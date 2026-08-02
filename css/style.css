@@ -500,16 +500,20 @@ body.light-theme .navbar.scrolled{ background:rgba(240,242,255,1); }
   font-size:1.7rem; color:#fff;
   box-shadow:0 6px 28px rgba(37,211,102,.5);
   z-index:999; transition:var(--transition);
-  /* will-change tells browser to composit this layer -->
+  overflow: visible;
   will-change: transform;
 }
 .whatsapp-float:hover { transform:scale(1.1); }
 .whatsapp-tooltip {
-  position:absolute; right:68px;
+  position:absolute; right:68px; top:50%;
+  transform: translateY(-50%);
   background:#25d366; color:#fff;
   padding:5px 13px; border-radius:50px;
   font-size:.8rem; font-weight:600;
-  white-space:nowrap; opacity:0; pointer-events:none; transition:var(--transition);
+  white-space:nowrap;
+  opacity:0; pointer-events:none;
+  transition:var(--transition);
+  box-shadow: 0 4px 12px rgba(0,0,0,.2);
 }
 .whatsapp-float:hover .whatsapp-tooltip { opacity:1; }
 
@@ -539,6 +543,7 @@ body.light-theme .navbar.scrolled{ background:rgba(240,242,255,1); }
   box-shadow:0 4px 18px rgba(108,99,255,.4);
   transition:var(--transition);
   opacity:0; visibility:hidden; z-index:998;
+  display:flex; align-items:center; justify-content:center;
 }
 .scroll-top.visible { opacity:1; visibility:visible; }
 .scroll-top:hover   { transform:translateY(-4px); background:var(--primary-dark); }
@@ -662,9 +667,17 @@ body.light-theme .navbar.scrolled{ background:rgba(240,242,255,1); }
 .testi-slider-wrapper { position: relative; }
 
 .testi-track {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: block; /* JS manages individual card display */
+  gap: 0;
+  /* Grid is created by making visible cards inline-grid via JS */
+}
+
+/* When JS has initialized, use flex layout for visible cards */
+.testi-track.js-ready {
+  display: flex;
+  flex-wrap: nowrap;
   gap: 24px;
+  align-items: stretch;
 }
 
 /* ---- Card ---- */
@@ -837,10 +850,10 @@ body.light-theme .navbar.scrolled{ background:rgba(240,242,255,1); }
 
 /* ---- Responsive ---- */
 @media (max-width: 1024px) {
-  .testi-track { grid-template-columns: repeat(2, 1fr); }
+  .testi-track.js-ready { gap: 16px; }
 }
 @media (max-width: 640px) {
-  .testi-track { grid-template-columns: 1fr; }
+  .testi-track.js-ready { gap: 12px; }
   .testi-footer { flex-direction: column; align-items: flex-start; gap: 10px; }
 }
 
