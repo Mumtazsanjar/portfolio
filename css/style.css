@@ -432,6 +432,26 @@ body.light-theme .navbar.scrolled{ background:rgba(240,242,255,1); }
   padding:2px 9px; border-radius:50px; font-size:.72rem; font-weight:500; color:var(--text-muted);
 }
 
+/* Live demo button inside project card */
+.project-live-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  padding: 6px 16px;
+  border-radius: 50px;
+  background: var(--gradient);
+  color: #fff;
+  font-size: .78rem;
+  font-weight: 600;
+  transition: var(--transition);
+  width: fit-content;
+}
+.project-live-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(108,99,255,.4);
+}
+
 /* ===== CONTACT ===== */
 .contact-content { display:grid; grid-template-columns:1fr 1.2fr; gap:50px; align-items:start; }
 .contact-info h3 { font-size:1.5rem; font-weight:700; margin-bottom:10px; }
