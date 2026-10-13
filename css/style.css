@@ -396,15 +396,14 @@ body.light-theme .navbar.scrolled{ background:rgba(240,242,255,1); }
 }
 .project-card:hover { transform:translateY(-8px); box-shadow:var(--shadow); border-color:var(--primary); }
 .project-card.hidden { display:none; }
-.project-img { position:relative; overflow:hidden; }
+.project-img { position:relative; overflow:hidden; background: var(--bg-card2); }
 .project-img img {
   width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9;
-  object-fit: contain;
-  background: var(--bg-card2);
-  transition: transform .4s;
+  height: 220px;
+  object-fit: cover;
+  object-position: top center;
   display: block;
+  transition: transform .4s;
 }
 .project-card:hover .project-img img { transform:scale(1.05); }
 .project-overlay {
@@ -648,6 +647,14 @@ body.light-theme .navbar.scrolled{ background:rgba(240,242,255,1); }
   .footer-bottom   { flex-direction:column; text-align:center; }
   .tech-grid       { grid-template-columns:repeat(3,1fr); }
   .stats-grid      { grid-template-columns:repeat(2,1fr); }
+
+  /* Project images — full height on mobile, no crop */
+  .project-img img {
+    height: auto;
+    min-height: 180px;
+    object-fit: cover;
+    object-position: top center;
+  }
 }
 
 /* Small phones 480px */
@@ -865,72 +872,4 @@ body.light-theme .navbar.scrolled{ background:rgba(240,242,255,1); }
   .testi-footer { flex-direction: column; align-items: flex-start; gap: 10px; }
 }
 
-/* ===== IMAGE LIGHTBOX ===== */
-.lightbox {
-  position: fixed; inset: 0;
-  z-index: 9998;
-  display: flex; align-items: center; justify-content: center;
-  padding: 16px;
-  opacity: 0; visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-.lightbox.open { opacity: 1; visibility: visible; }
-
-.lightbox-overlay {
-  position: absolute; inset: 0;
-  background: rgba(0,0,0,0.88);
-  backdrop-filter: blur(6px);
-  cursor: pointer;
-}
-.lightbox-box {
-  position: relative;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  overflow: hidden;
-  max-width: 90vw;
-  max-height: 90vh;
-  width: 100%;
-  display: flex; flex-direction: column;
-  z-index: 1;
-  transform: scale(0.9);
-  transition: transform 0.3s ease;
-  box-shadow: 0 24px 80px rgba(0,0,0,0.6);
-}
-.lightbox.open .lightbox-box { transform: scale(1); }
-
-.lightbox-header {
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 14px 18px;
-  border-bottom: 1px solid var(--border);
-  flex-shrink: 0;
-}
-.lightbox-title {
-  font-size: .95rem; font-weight: 700;
-  color: var(--text);
-}
-.lightbox-close {
-  width: 34px; height: 34px;
-  border-radius: 50%;
-  border: 1px solid var(--border);
-  background: var(--bg-card2);
-  color: var(--text);
-  cursor: pointer; font-size: 1rem;
-  display: flex; align-items: center; justify-content: center;
-  transition: var(--transition);
-}
-.lightbox-close:hover { background: var(--secondary); border-color: var(--secondary); color: #fff; }
-
-.lightbox-body {
-  overflow: auto;
-  display: flex; align-items: center; justify-content: center;
-  max-height: calc(90vh - 60px);
-}
-.lightbox-body img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: contain;
-}
-
-/* end of stylesheet */
+/* ===== IMAGE LIGHTBOX — removed ===== */

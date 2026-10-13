@@ -226,47 +226,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// ===== IMAGE LIGHTBOX =====
-(function initLightbox() {
-  const lightbox        = document.getElementById('lightbox');
-  const lightboxImg     = document.getElementById('lightboxImg');
-  const lightboxTitle   = document.getElementById('lightboxTitle');
-  const lightboxClose   = document.getElementById('lightboxClose');
-  const lightboxOverlay = document.getElementById('lightboxOverlay');
 
-  if (!lightbox) return;
-
-  // Open lightbox on eye icon click
-  document.querySelectorAll('.project-view').forEach(btn => {
-    btn.addEventListener('click', function(e) {
-      e.preventDefault();
-      const img   = this.getAttribute('data-img');
-      const title = this.getAttribute('data-title');
-      lightboxImg.src       = img;
-      lightboxImg.alt       = title;
-      lightboxTitle.textContent = title;
-      lightbox.classList.add('open');
-      document.body.style.overflow = 'hidden';
-    });
-  });
-
-  // Close on X button or overlay click
-  function closeLightbox() {
-    lightbox.classList.remove('open');
-    document.body.style.overflow = '';
-    setTimeout(() => { lightboxImg.src = ''; }, 300);
-  }
-
-  lightboxClose.addEventListener('click', closeLightbox);
-  lightboxOverlay.addEventListener('click', closeLightbox);
-
-  // Close on Escape key
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && lightbox.classList.contains('open')) {
-      closeLightbox();
-    }
-  });
-})();
 
 // ===== TESTIMONIALS SLIDER =====
 (function initTestimonials() {
