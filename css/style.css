@@ -397,7 +397,15 @@ body.light-theme .navbar.scrolled{ background:rgba(240,242,255,1); }
 .project-card:hover { transform:translateY(-8px); box-shadow:var(--shadow); border-color:var(--primary); }
 .project-card.hidden { display:none; }
 .project-img { position:relative; overflow:hidden; }
-.project-img img { width:100%; height:190px; object-fit:cover; transition:transform .4s; display:block; }
+.project-img img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: var(--bg-card2);
+  transition: transform .4s;
+  display: block;
+}
 .project-card:hover .project-img img { transform:scale(1.05); }
 .project-overlay {
   position:absolute; inset:0;
@@ -640,14 +648,6 @@ body.light-theme .navbar.scrolled{ background:rgba(240,242,255,1); }
   .footer-bottom   { flex-direction:column; text-align:center; }
   .tech-grid       { grid-template-columns:repeat(3,1fr); }
   .stats-grid      { grid-template-columns:repeat(2,1fr); }
-
-  /* Project images — full aspect ratio on mobile so nothing is clipped */
-  .project-img img {
-    height: auto;
-    aspect-ratio: 16 / 9;
-    width: 100%;
-    object-fit: cover;
-  }
 }
 
 /* Small phones 480px */
@@ -668,14 +668,6 @@ body.light-theme .navbar.scrolled{ background:rgba(240,242,255,1); }
   .scroll-top  { bottom:80px; right:14px; }
   .tech-grid   { grid-template-columns:repeat(2,1fr); }
   .section     { padding:70px 0; }
-
-  /* Project images on very small phones */
-  .project-img img {
-    height: auto;
-    aspect-ratio: 16 / 9;
-    width: 100%;
-    object-fit: cover;
-  }
 }
 
 /* ===== TESTIMONIALS ===== */
